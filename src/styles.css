@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, 'Noto Sans JP', system-ui, sans-serif;
+  background: #05070d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(40, 240, 255, 0.16), transparent 28rem),
+    radial-gradient(circle at 75% 10%, rgba(202, 255, 74, 0.08), transparent 20rem),
+    #05070d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.section-shell {
+  position: relative;
+  width: min(1180px, calc(100vw - 40px));
+  margin: 0 auto;
+}
+
+.archive-panel {
+  border: 1px solid rgba(180, 215, 255, 0.16);
+  background: linear-gradient(180deg, rgba(12, 18, 32, 0.86), rgba(7, 10, 18, 0.68));
+  box-shadow: 0 0 60px rgba(40, 240, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+}
+
+.grid-field {
+  background-image:
+    linear-gradient(rgba(130, 180, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(130, 180, 255, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.glow-dot {
+  filter: drop-shadow(0 0 8px currentColor) drop-shadow(0 0 18px currentColor);
+}
+
+.signal-node {
+  transform-origin: center;
+  will-change: transform, width, height, opacity;
+}
+
+.signal-node:hover {
+  opacity: 1 !important;
+  z-index: 30;
+  scale: 1.08;
+}
+
+.signal-map-field {
+  min-height: 100vh;
+}
+
+.chip {
+  border: 1px solid rgba(190, 220, 255, 0.18);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

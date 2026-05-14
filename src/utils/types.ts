@@ -1,0 +1,30 @@
+import type { EngineGroup } from '../data/engineMapping';
+import type { TagGroup } from '../data/tagGroups';
+
+export type Song = {
+  id: string;
+  title: string;
+  titleEnglish?: string;
+  artist?: string;
+  producer?: string;
+  year: number;
+  uploadDate?: string;
+  views: number;
+  vocal: string[];
+  engine: string[];
+  engineGroup: EngineGroup[];
+  tags: string[];
+  tagGroups: TagGroup[];
+  url?: string;
+  image?: string;
+  thumbnailUrl?: string;
+  visualType?: 'image' | 'thumbnail' | 'generated';
+  imageStatus?: 'album-cover' | 'video-thumbnail' | 'generated' | 'missing';
+  imageSource?: string;
+  era: string;
+  includeInDataset: boolean;
+  needsReview: boolean;
+  shortDescription?: string;
+  rawArtistString?: string;
+  songType?: string;
+};
